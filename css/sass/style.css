@@ -1,0 +1,196 @@
+/* Custom style for site */
+@font-face {
+  font-family: "Miso";
+  src: url("../fonts/Miso.otf");
+  src: local("Miso"), url("../fonts/Miso.otf") format("opentype");
+  font-weight: normal; }
+
+@font-face {
+  font-family: "Miso Bold";
+  src: url("../fonts/Miso-Bold.otf");
+  src: local("Miso Bold"), url("../fonts/Miso-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: bold; }
+
+html, body, wrapper {
+  height: 100%; }
+
+h1, h2, h3 {
+  font-family: "Miso", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  color: #444444; }
+
+section#home h1 {
+  font-size: 64px;
+  margin-top: 20%; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #eeeeee;
+  color: #666666; }
+
+div#wrapper {
+  margin-left: auto;
+  margin-right: auto; }
+
+header {
+  background-color: #444444;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#444444), to(#222222));
+  background-image: -webkit-linear-gradient(top, #444444, #222222);
+  background-image: -moz-linear-gradient(top, #444444, #222222);
+  background-image: -ms-linear-gradient(top, #444444, #222222);
+  background-image: -o-linear-gradient(top, #444444, #222222);
+  display: block;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  color: white;
+  font-family: "Miso", Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  padding: 8px; }
+
+nav {
+  width: 552px;
+  margin-left: auto;
+  margin-right: auto; }
+  nav div#home {
+    width: 100px;
+    float: left; }
+  nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    vertical-align: center; }
+    nav ul li {
+      display: inline;
+      width: 50px;
+      margin-right: 18px; }
+  nav a {
+    color: white; }
+
+section {
+  height: 1000px;
+  margin: 0 auto;
+  padding: 72px 24px 24px;
+  width: 600px; }
+
+a {
+  color: #00bbd6;
+  text-decoration: none; }
+  a.next_section {
+    float: right;
+    clear: right;
+    font-family: "Miso", Arial, Helvetica, sans-serif;
+    font-size: large;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
+    clear: both;
+    background-color: #dddddd;
+    padding: 8px;
+    font-size: 20px; }
+  a:active {
+    color: red; }
+  a:hover {
+    color: #00bbd6; }
+  a:visited {
+    color: #0088a4; }
+
+div.project_thumbnail img {
+  border: 1px solid black;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -khtml-border-radius: 50px;
+  border-radius: 50px;
+  border: 1px solid #444444;
+  background-color: #00bbd6; }
+
+div.title {
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
+  -khtml-border-radius: 75px;
+  border-radius: 75px;
+  overflow: hidden;
+  width: 130px;
+  height: 130px;
+  margin: 36px auto;
+  text-align: center;
+  color: white;
+  background-color: #00bbd6; }
+  div.title h1 {
+    padding-top: 35%; }
+
+.float_right {
+  position: relative;
+  float: right; }
+
+.leave-message {
+  width: 284px;
+  padding-left: 8px;
+  float: right;
+  clear: right; }
+  .leave-message h2 {
+    text-align: center; }
+
+.contact-details {
+  width: 300px;
+  float: left;
+  clear: left; }
+
+table {
+  margin-right: 0; }
+  table td {
+    padding: 8px; }
+    table td:first-child {
+      padding-left: 0;
+      font-weight: bold; }
+
+form div.form-elem {
+  display: table; }
+  form div.form-elem label {
+    display: table-cell;
+    font-weight: bold;
+    width: 80px; }
+  form div.form-elem input {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    padding: 8px;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    display: table-cell;
+    width: 100%; }
+    form div.form-elem input:focus {
+      outline: none;
+      border-color: #00bbd6;
+      box-shadow: 0 0 4px #00bbd6; }
+    form div.form-elem input[type="submit"] {
+      font-family: "Miso", Arial, Helvetica, sans-serif;
+      font-size: large;
+      text-align: right;
+      font-weight: bold;
+      background-color: #00bbd6;
+      color: white; }
+      form div.form-elem input[type="submit"]:active {
+        background-color: #444444; }
+  form div.form-elem textarea {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    padding: 8px;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    width: 100%;
+    height: 200px; }
+    form div.form-elem textarea:focus {
+      outline: none;
+      border-color: #00bbd6;
+      box-shadow: 0 0 4px #00bbd6; }

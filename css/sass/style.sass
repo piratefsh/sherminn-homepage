@@ -1,0 +1,278 @@
+/* Custom style for site*/
+@charset "utf-8"
+
+//Colors
+$white: #ffffff
+$light-grey: #eeeeee
+$grey: #ddd
+$dark-grey: #666
+$darker-grey: #444
+$darkest-grey: #222
+$blue: #00BBD6
+$dark-blue: #0088a4
+$little-space: 8px
+
+//Fonts
+@font-face
+  font-family: 'Miso'
+  src: url('../fonts/Miso.otf')
+  src: local("Miso"), url('../fonts/Miso.otf') format("opentype")
+  font-weight: normal
+
+
+@font-face
+  font-family: 'Miso Bold'
+  src: url('../fonts/Miso-Bold.otf')
+  src: local("Miso Bold"), url('../fonts/Miso-Bold.otf') format("opentype")
+  font-style: normal
+  font-weight: bold
+
+//Mixins
+@mixin rounded-corners ($radius)
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  -khtml-border-radius: $radius
+  border-radius: $radius
+
+@mixin float-left
+  float: left
+  clear: left
+
+@mixin float-right
+  float: right
+  clear: right
+
+@mixin right-border
+  border-right: 1px solid $grey
+
+@mixin miso-font
+  font-family: 'Miso', Arial, Helvetica, sans-serif
+  font-size: large
+
+@mixin glowy_border($color)
+  outline: none
+  border-color: $color
+  box-shadow: 0 0 4px $color
+@mixin border($color)
+  border: 1px solid $color
+@mixin shadow 
+
+@mixin gradient($color1, $color2)
+  background-color: $color1
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2))
+  background-image: -webkit-linear-gradient(top, $color1, $color2)
+  background-image:    -moz-linear-gradient(top, $color1, $color2)
+  background-image:     -ms-linear-gradient(top, $color1, $color2)
+  background-image:      -o-linear-gradient(top, $color1, $color2)
+
+//Elements
+html, body, wrapper
+  height: 100%
+
+h1, h2, h3
+  font-family: 'Miso', Arial, Helvetica, sans-serif
+  margin: 0
+  padding: 0
+  min-width: 100%
+  color: $darker-grey
+
+section#home h1
+  font-size: 64px
+  margin-top: 20%
+
+body
+  font-family: 'Open Sans', sans-serif
+  background-color: $light-grey
+  color: $dark-grey
+
+div#wrapper
+  margin-left: auto
+  margin-right: auto
+
+//Header
+header
+  @include gradient($darker-grey, $darkest-grey)
+  display: block
+  width: 100%
+  z-index: 10
+  position: fixed
+  color: #fff
+  font-family: 'Miso', Arial, Helvetica, sans-serif
+  font-size: x-large
+  padding: $little-space
+
+nav
+  width: 552px
+  margin-left: auto
+  margin-right: auto
+  div#home
+    width: 100px
+    float: left
+  ul
+    list-style: none
+    float: right
+    margin: 0
+    padding: 0
+    vertical-align: center
+    li
+      display: inline
+      width: 50px
+      margin-right: 18px
+
+  a
+    color: $white
+
+//Sections
+section
+  min-height: 1000px
+  margin: 0 auto
+  padding: 72px 24px 24px
+  width: 600px
+
+a
+  color: $blue
+
+  &.next_section
+    @include float-right
+    @include miso-font
+    @include rounded-corners(8px)
+    clear: both
+    background-color: $grey
+    padding: $little-space
+    font-size: 20px
+  text-decoration: none
+  
+  &:active
+    color: #f00
+ 
+  &:hover 
+    color: $blue
+
+  &:visited
+    color: $dark-blue
+
+//Section headers
+div.title
+  @include shadow
+  @include rounded-corners(75px)
+  overflow: hidden
+  width: 130px
+  height: 130px
+  margin: 36px auto 
+  text-align: center
+  color: $white
+  background-color: $blue
+
+  h1
+    padding-top: 35%
+
+.float_right
+  position: relative
+  float: right
+
+.leave-message
+  width: 300px - 2*$little-space
+  padding-left: $little-space
+  @include float-right
+  h2
+    text-align: center
+
+.contact-details
+  width: 300px
+  @include float-left
+table
+  margin-right: 0
+  td 
+    padding: $little-space
+    &:first-child
+      padding-left: 0
+      font-weight: bold
+
+@mixin input-fields
+  @include rounded-corners(4px)
+  border: 1px solid $grey
+  padding: $little-space
+  margin-bottom: $little-space
+  margin-top: 4px
+
+@mixin button_style
+  @include input-fields
+  @include miso-font
+  text-align: right
+  font-weight: bold
+  background-color: $blue
+  color: $white
+  &:active
+    background-color: $darker-grey
+form 
+  div.form-elem
+    display: table
+    label
+      display: table-cell
+      font-weight: bold
+      width: 80px
+    input 
+      @include input-fields
+      display: table-cell
+      width: 100%
+
+      &:focus
+        @include glowy_border($blue)
+
+      &[type="submit"]
+        @include button_style
+
+    textarea
+      @include input-fields
+      width: 100%
+      height: 200px
+      &:focus
+        @include glowy_border($blue)
+p 
+  font-size: small
+
+div.project 
+  overflow: auto
+  display: block
+  margin:
+    bottom: 36px
+  //Circular thumbnails
+
+  div
+    margin: 12px
+
+  div.desc
+    float: left
+    width: 400px
+    h3
+      color: $blue
+      font-size: x-large
+      border-bottom: $grey 1px solid
+    a
+      font-weight: bold
+
+  div.project_thumbnail
+    float: right
+    clear: both
+    vertical-align: center
+    min-width: 150px
+    max-width: 150px
+    max-height: 150px
+    min-height: 150px
+    @include rounded-corners(75px)
+    @include border($grey)
+    overflow: hidden
+
+    &#newsletter
+      background-image: url(../img/project_thumbnails/project_newsletterbuilder.png)
+      background-position: center
+    &#scrambler
+      background-image: url(../img/project_thumbnails/project_scrambler.png)
+      background-position: bottom
+    &#tuter
+      background-image: url(../img/project_thumbnails/project_tuter.png)
+      background-position: top
+
+  input
+    @include button_style
+
