@@ -91,23 +91,13 @@ section#home
     font-size: 64px
     margin-top: 20%
 
-  // a.next_section
-  //   background-color: $blue
-  //   color: $white
-
 body
   font-family: 'Open Sans', sans-serif
   background-color: $light-grey
   background-repeat: no-repeat
   color: $dark-grey
-  img#header_img
-    position: absolute
-    z-index: -1
-    display: hidden
 
 div#wrapper
-  margin-left: auto
-  margin-right: auto
 
 //Header
 header
@@ -138,9 +128,11 @@ nav
       display: inline
       width: 50px
       margin-right: 18px
-
   a
-    color: $white
+    &:visited
+      color: $white
+    &:hover 
+      color: $blue
 
 //Sections
 section
@@ -151,6 +143,7 @@ section
 
 a
   color: $blue
+  text-decoration: none
 
   &.next_section
     @include float-right
@@ -160,17 +153,13 @@ a
     background-color: $grey
     padding: $little-space
     font-size: 20px
-  text-decoration: none
   
   &:active
     color: #f00
- 
-  &:hover 
-    color: $blue
+
 
   &:visited
     color: $dark-blue
-
 //Section headers
 div.title
   @include shadow

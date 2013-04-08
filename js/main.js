@@ -2,22 +2,25 @@
 $(document).ready(function(){
 	$("img#header_img").ready(function(e)
 	{
-		$("img#header_img").fadeIn(800);
+		var img = $("img#header_img");
+		// img.fadeIn();
+		$("body").css('background-image', 'url(./img/header.png)').fadeIn();
+
 	});
 	//smooth scroll to href
 	function scrollToHref(event)
 	{
 		event.preventDefault(); //prevent default a jump
 		var scrollVertical = $('section' + this.href.substring(this.href.indexOf("#")));
-		$(this).parents("body").scrollTo(scrollVertical, 500);
+		$(this).parents("body").scrollTo(scrollVertical.position(), 500);
 		return false;
 	}
 	
 	$("a.next_section").click(scrollToHref);
 	$("nav a").click(scrollToHref);
 	
-	//float next button just above bottom of screen
 	
+	//functional scrambler on page
 	$("input#activate_scrambler").click(function()
 	{
 		scramble($('body'));

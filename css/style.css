@@ -43,14 +43,6 @@ body {
   background-color: #eeeeee;
   background-repeat: no-repeat;
   color: #666666; }
-  body img#header_img {
-    position: absolute;
-    z-index: -1;
-    display: hidden; }
-
-div#wrapper {
-  margin-left: auto;
-  margin-right: auto; }
 
 header {
   background-color: #444444;
@@ -85,8 +77,10 @@ nav {
       display: inline;
       width: 50px;
       margin-right: 18px; }
-  nav a {
+  nav a:visited {
     color: white; }
+  nav a:hover {
+    color: #00bbd6; }
 
 section {
   min-height: 1000px;
@@ -112,8 +106,6 @@ a {
     font-size: 20px; }
   a:active {
     color: red; }
-  a:hover {
-    color: #00bbd6; }
   a:visited {
     color: #0088a4; }
 
