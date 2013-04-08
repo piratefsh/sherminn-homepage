@@ -3,8 +3,8 @@ $(document).ready(function(){
 	$("img#header_img").ready(function(e)
 	{
 		var img = $("img#header_img");
-		// img.fadeIn();
-		$("body").css('background-image', 'url(./img/header.png)').fadeIn();
+		img.fadeIn();
+		// $("body").css('background-image', 'url(./img/header.png)').fadeIn();
 
 	});
 	//smooth scroll to href
