@@ -1,8 +1,9 @@
 
 $(document).ready(function(){
+	$('div#header_img').fadeIn();
 	$("img#header_img").ready(function(e)
 	{
-		var img = $("img#header_img");
+		var img = $("div#header_img");
 		img.fadeIn();
 		// $("body").css('background-image', 'url(./img/header.png)').fadeIn();
 
@@ -12,7 +13,11 @@ $(document).ready(function(){
 	{
 		event.preventDefault(); //prevent default a jump
 		var scrollVertical = $('section' + this.href.substring(this.href.indexOf("#")));
-		$(this).parents("body").scrollTo(scrollVertical.position(), 500);
+		var pos = {
+			top: scrollVertical.position().top,
+			left: 0
+		}
+		$(this).parents("body").scrollTo(pos , 500);
 		return false;
 	}
 	
