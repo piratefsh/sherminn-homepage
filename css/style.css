@@ -22,6 +22,18 @@ h1, h2, h3 {
   min-width: 100%;
   color: #444444; }
 
+h2 {
+  font-size: xx-large; }
+
+section#home .highlight {
+  padding: 60px;
+  height: 510px;
+  width: 510px;
+  background-color: rgba(0, 187, 214, 0.4);
+  -moz-border-radius: 630px;
+  -webkit-border-radius: 630px;
+  -khtml-border-radius: 630px;
+  border-radius: 630px; }
 section#home h1 {
   font-size: 64px;
   margin-top: 20%; }
@@ -29,7 +41,12 @@ section#home h1 {
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #eeeeee;
+  background-repeat: no-repeat;
   color: #666666; }
+  body img#header_img {
+    position: absolute;
+    z-index: -1;
+    display: hidden; }
 
 div#wrapper {
   margin-left: auto;
@@ -194,24 +211,22 @@ form div.form-elem {
       border-color: #00bbd6;
       box-shadow: 0 0 4px #00bbd6; }
 
-p {
-  font-size: small; }
-
 div.project {
+  border-left: 3px solid #00bbd6;
   overflow: auto;
   display: block;
-  margin-bottom: 36px; }
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding-left: 18px; }
   div.project div {
     margin: 12px; }
-  div.project div.desc {
-    float: left;
-    width: 400px; }
-    div.project div.desc h3 {
-      color: #00bbd6;
-      font-size: x-large;
-      border-bottom: #dddddd 1px solid; }
-    div.project div.desc a {
-      font-weight: bold; }
+  div.project div.desc h2 {
+    color: #00bbd6; }
+  div.project div.desc h3 {
+    font-size: x-large;
+    border-bottom: #dddddd 1px solid; }
+  div.project div.desc a {
+    font-weight: bold; }
   div.project div.project_thumbnail {
     float: right;
     clear: both;

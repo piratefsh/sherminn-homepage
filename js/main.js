@@ -1,5 +1,9 @@
+
 $(document).ready(function(){
-	
+	$("img#header_img").ready(function(e)
+	{
+		$("img#header_img").fadeIn(800);
+	});
 	//smooth scroll to href
 	function scrollToHref(event)
 	{

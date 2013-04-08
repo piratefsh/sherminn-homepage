@@ -76,14 +76,34 @@ h1, h2, h3
   min-width: 100%
   color: $darker-grey
 
-section#home h1
-  font-size: 64px
-  margin-top: 20%
+h2
+  font-size: xx-large
+section#home 
+  .highlight
+    $padding: 60px
+    $width: 630px
+    padding: $padding
+    height: $width - $padding * 2
+    width: $width - $padding * 2
+    background-color: rgba($blue, 0.4)
+    @include rounded-corners($width)
+  h1
+    font-size: 64px
+    margin-top: 20%
+
+  // a.next_section
+  //   background-color: $blue
+  //   color: $white
 
 body
   font-family: 'Open Sans', sans-serif
   background-color: $light-grey
+  background-repeat: no-repeat
   color: $dark-grey
+  img#header_img
+    position: absolute
+    z-index: -1
+    display: hidden
 
 div#wrapper
   margin-left: auto
@@ -228,24 +248,25 @@ form
       height: 200px
       &:focus
         @include glowy_border($blue)
-p 
-  font-size: small
 
 div.project 
+  border-left: 3px solid $blue
   overflow: auto
   display: block
   margin:
-    bottom: 36px
+    top: 20px
+    bottom: 60px
+  padding:
+    left: 18px
   //Circular thumbnails
 
   div
     margin: 12px
 
   div.desc
-    float: left
-    width: 400px
-    h3
+    h2
       color: $blue
+    h3
       font-size: x-large
       border-bottom: $grey 1px solid
     a
