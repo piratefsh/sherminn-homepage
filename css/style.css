@@ -219,7 +219,7 @@ div.project {
   display: block;
   margin-top: 20px;
   margin-bottom: 60px;
-  padding-left: 18px; }
+  padding: 18px; }
   div.project div {
     margin: 12px; }
   div.project div.desc h2 {

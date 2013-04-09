@@ -37,4 +37,23 @@ $(document).ready(function(){
 
 	//make all external links in project open in new window
 	$("div.project a").attr("target", "_blank") 
+
+	var blue = "rgba(0, 187, 214, 0.5)";
+	var light_grey = "#eeeeee";
+	var white = "#ffffff";
+
+	var animationLength = 800;
+	$("div.project").hover(function()
+	{
+		$(this).stop().animate(
+		{
+			backgroundColor: white,
+		}, animationLength);
+	}, function()
+	{
+		$(this).stop().animate(
+		{
+			backgroundColor: light_grey
+		}, animationLength);
+	});
 });
